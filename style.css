@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+  /* height: 8000px; */
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+header {
+  box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 10%);
+  background-color: #7f8fa6;
+}
+
+header .logo {
+  width: 50px;
+}
+header .navbar ul li a {
+  transition: all 0.4s ease;
+}
+header .navbar ul li:hover a {
+  color: #feb23a;
+}
+
+.banner {
+  background-image: url(./imgs/zdenek-machacek-lmZtT6q8tt0-unsplash.jpg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.banner .heading {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .heading h1 {
+  font-size: 70px;
+  color: #feb23a;
+  position: relative;
+  z-index: 2;
+}
+.banner .heading span {
+  display: block;
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
+  right: 88px;
+}
+
+.books-container .books-heading h2 {
+  font-size: 60px;
+  color: #feb23a;
+}
+.books-container .content .books {
+  flex-basis: 85%;
+}
+.books-container .content .books .row .col {
+  width: calc(calc(100% / 4) - 25px);
+  min-height: 450px;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 1px 1px 8px 0px rgb(0 0 0 / 15%),
+    -1px -1px 8px 0px rgb(0 0 0 / 15%);
+}
+.books-container .content .books .row .col .image {
+  overflow: hidden;
+}
+.books-container .content .books .row .col .image img {
+  height: 380px;
+}
+.books-container .content .books .row .col .image .buttons {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.61);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.books-container .content .books .row .col .image:hover .buttons {
+  bottom: 0;
+}
+.books-container .content .books .row .col .image .buttons a {
+  background-color: #212529;
+  width: 40px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.books-container .content .books .row .col .image .buttons a i {
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.books-container .content .books .row .col .image .buttons a:last-of-type i {
+  font-size: 18px;
+}
+
+.books-container .content .books .row .col .image .buttons a:hover i {
+  color: #feb23a;
+}
+
+.books-container .content .books .row .col .book-title {
+  height: 70px;
+  margin-top: 30.5px;
+}
+
+.books-container .content .books .row .col .book-title span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.books-container .content .menu-filter {
+  flex-basis: 15%;
+  text-align: center;
+  background-color: #fff;
+  height: 350px;
+  box-shadow: 0px 0px 6px 0 rgb(7 7 7 / 20%);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.books-container .content .menu-filter ul li.menu-heading {
+  background-color: dodgerblue;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.books-container .content .menu-filter ul li a {
+  color: #000;
+  line-height: 2;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+@media (max-width: 1399px) {
+  .books-container .content .books .row .col {
+    width: calc(calc(100% / 3) - 25px);
+  }
+}
+@media (max-width: 991px) {
+  .books-container .content .books .row .col {
+    width: calc(calc(100% / 2) - 25px);
+  }
+}
+@media (max-width: 767px) {
+  .books-container .content .books .row .col {
+    width: calc(100% - 25px);
+  }
+}
+
+/* start Dashboard */
+
+.add-book {
+  padding-bottom: 190px;
+}
+.add-book .heading h1 {
+  font-size: 50px;
+  color: #feb23a;
+}
+.add-book-form form input[type="text"] {
+  border: 1px solid #dcdde1;
+  font-size: 17px;
+  font-family: inherit;
+  border-radius: 7px;
+}
+
+.add-book-form form input[type="file"] {
+  border-radius: 7px;
+  border: 1px solid #dcdde1;
+  cursor: pointer;
+}
+.add-book-form form input[type="file"]::-webkit-file-upload-button {
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #dcdde1;
+}
+.add-book-form form input[type="file"]::file-selector-button {
+  background-color: #dddddd80;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.add-book-form form button {
+  font-size: 22px;
+  font-weight: 500;
+
+  width: 100%;
+  border: 1px solid #dcdde1;
+  background-color: #dddddd80;
+}
+
+.signup {
+  padding-bottom: 300px;
+}
+
+.signup .heading h1 {
+  font-size: 50px;
+  color: #feb23a;
+}
+
+.signup .signup-form form input[type="text"],
+.signup .signup-form form input[type="email"],
+.signup .signup-form form input[type="password"] {
+  border: 1px solid #dcdde1;
+  font-size: 17px;
+  font-family: inherit;
+  border-radius: 7px;
+}
+.signup .signup-form span {
+  text-align: center;
+  display: block;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.signup .signup-form span a {
+  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  color: #2196f3;
+}
+.signup-form form button {
+  font-size: 22px;
+  font-weight: 500;
+  border: 1px solid #dcdde1;
+  border-radius: 7px;
+  background-color: #dddddd80;
+  transition: all 0.4s ease;
+}
+
+.signup-form form button:hover {
+  background-color: #c0bfbf80;
+}
+
+.login {
+  padding-bottom: 350px;
+}
+
+.login .heading h1 {
+  font-size: 50px;
+  color: #feb23a;
+}
+
+.login .login-form form input[type="text"],
+.login .login-form form input[type="password"] {
+  border: 1px solid #dcdde1;
+  font-size: 17px;
+  font-family: inherit;
+  border-radius: 7px;
+}
+
+.login-form form button {
+  font-size: 22px;
+  font-weight: 500;
+  border: 1px solid #dcdde1;
+  border-radius: 7px;
+  background-color: #dddddd80;
+  transition: all 0.4s ease;
+}
+
+.login-form form button:hover {
+  background-color: #c0bfbf80;
+}
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+footer .about-creater {
+  background-color: #2196f3;
+  width: 400px;
+  border-radius: 7px;
+  padding: 12px 15px;
+  box-shadow: 2px 2px 7px 0 rgb(17 16 16 / 49%);
+}
+footer .about-creater img {
+  width: 30px;
+  height: 30px;
+  box-shadow: 2px 2px 5px 0 rgb(0 0 0 / 26%);
+  border-radius: 50%;
+}
+footer .about-creater p {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
